@@ -13,7 +13,7 @@
     <div class="app-header-contents">
       <h1>- おみくじアプリ -</h1>
       <h2>今日のあなたの運勢は・・・</h2>
-      <button class="start-button js-fortune-start" type="button" data-text-default="運勢を占う！" data-text-clicked="もう一度占う！」">
+      <button class="start-button js-fortune-start" type="button" data-text-default="運勢を占う！" data-text-clicked="もう一度占う！">
         運勢を占う！
     </button>
     </div>
@@ -69,7 +69,7 @@ let fortuneResults = {
     $('.js-fortune-start').click(function() {
       for (let i = 0 ; i < 1 ; i++){
         let money_num = Math.floor(Math.random() * 3) ;
-        $('.result').removeClass();
+        $('.result').toggle();
         $(this).toggleClass('active')
         
         if($(this).hasClass('active')){
